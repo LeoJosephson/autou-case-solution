@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Classificador de Emails</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Classificador de Emails</h1>
+    <p class="subtitle">Digite o texto de um email ou envie um arquivo (.txt / .pdf)</p>
+
+    <textarea id="text" placeholder="Digite seu email aqui..."></textarea>
+    <div class="file-upload">
+      <input type="file" id="file" accept=".txt,.pdf" hidden>
+      <label for="file" class="custom-file-btn">📂 Escolher arquivo</label>
+      <span id="file-name" class="file-name">Nenhum arquivo selecionado</span>
+      <button id="remove-file" class="remove-file-btn" style="display:none;">✖</button>
+    </div>
+
+    <button onclick="submitData()">Analisar</button>
+
+    <div id="response"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

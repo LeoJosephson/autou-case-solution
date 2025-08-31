@@ -1,0 +1,171 @@
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #f6f8fa;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  margin-top: 60px;
+  width: 100%;
+  max-width: 650px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  resize: vertical;
+  min-height: 120px;
+  margin-bottom: 20px;
+}
+
+.file-upload {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.custom-file-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.custom-file-btn:hover {
+  background-color: #0056b3;
+}
+
+.file-name {
+  font-size: 14px;
+  color: #444;
+  font-style: italic;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.remove-file-btn {
+  background: #dc3545;
+  border: none;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.remove-file-btn:hover {
+  background: #a71d2a;
+}
+button {
+  width: 100%;
+  padding: 14px;
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#response {
+  margin-top: 25px;
+  display: none;
+}
+
+.card {
+  background: #fefefe;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 18px;
+  margin-top: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.reply {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.badge-important {
+  background: #e6f7e6;
+  color: #1d5e1d;
+  border: 1px solid #a8d5a8;
+}
+
+.badge-not-important {
+  background: #fdeaea;
+  color: #a12626;
+  border: 1px solid #f5b5b5;
+}
+
+/* Loader */
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
