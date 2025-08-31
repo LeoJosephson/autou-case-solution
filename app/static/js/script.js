@@ -1,11 +1,20 @@
 const textArea = document.getElementById("text");
 const fileInput = document.getElementById("file");
+const label = document.getElementById("custom-file-btn");
 const fileName = document.getElementById("file-name");
 const removeFileBtn = document.getElementById("remove-file");
 const responseBox = document.getElementById("response");
 
 textArea.addEventListener("input", () => {
-  fileInput.disabled = textArea.value.trim().length > 0;
+  if (textArea.value.trim().length > 0) {
+    // Caso tenha texto -> desabilita o fileInput
+    fileInput.disabled = true;
+    label.style.cursor = "not-allowed";
+  } else {
+    // Caso esteja vazio -> habilita o fileInput
+    fileInput.disabled = false;
+    label.style.cursor = "pointer";
+  }
 });
 
 fileInput.addEventListener("change", () => {
