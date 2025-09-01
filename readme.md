@@ -60,3 +60,5 @@ Para gerar sua chave API do Gemini: https://aistudio.google.com/apikey
 1. Para executar a aplicação
 
     `` flask run ``
+
+2. O projeto roda automaticamente na porta 5000, para acessa-lo basta acessar o link: http://127.0.0.1:5000
